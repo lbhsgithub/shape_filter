@@ -1,3 +1,4 @@
+%% 形状函数在最后
 %% file open
 addpath('./other_file')
 [fname,path] = uigetfile({'*.jpg';'*.png'}); 
@@ -69,5 +70,45 @@ function GUI(p,fname)  % name的问题之后再说
             end
         end
         imshow(p);
+    end
+end
+
+function markedCCs = markCCs(p,parameters)
+    sizeofimage = size(p);
+    CC = bwconncomp(p);
+    markedCCs = {};  % previously unknown 
+    % one CC
+    for CCi = CC.PixelIdxList
+        % index to subscript 
+        amount = length(CCi{1});
+        subs = zeros(amount,2);
+        indexs = CCi{1};
+        for i = 1:amount
+            [subs(i,1),subs(i,2)] = ind2sub(sizeofimage,indexs(i));
+        end
+        % filter
+        if shape_filter(subs,parameters)
+            markedCCs{end+1} = indexs;
+        end
+    end 
+end
+
+% 所有的工作都在这个函数的逻辑判断上
+function T_F = shape_filter(subs,parameters_threshold) 
+    % 由斜条或者斜半圆想到，面积不饱满。pi*△x*△y与面积相比
+    % 计算要用的参数
+    S = size(subs,1);
+    x_ = subs(:,2);
+    y_ = subs(:,1);
+    deltaX = max(x_)-min(x_);
+    deltaY = max(y_)-min(y_);
+    Y_X = deltaY - deltaX;
+    % parallel conditions
+    T_F = false;
+    if (S<parameters_threshold(1))
+        T_F = true;
+    end
+    if (Y_X<parameters_threshold(2))
+        T_F = true;
     end
 end
