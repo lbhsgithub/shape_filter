@@ -20,5 +20,5 @@ end
 ![1 GUI](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/1_GUI.png)  
 ![1 GUI processed](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/2_GUI_processed.png)
 ##### 2 profile
-![1 before profile](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/3_before_profile.jpg)  
-![1 after profile](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/1_after_profile.jpg)
+![1 before repair](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/3_before_repair.jpg)  
+![1 after repair](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/1_after_repair.jpg)
