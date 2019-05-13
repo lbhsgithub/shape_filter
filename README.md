@@ -19,5 +19,6 @@ end
 ##### 1 crack_tool (use figure handle as input of image and thresholds)
 ![1 GUI](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/1_GUI.png)  
 ![1 GUI processed](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/2_GUI_processed.png)
-##### 2 profile
+##### 2 repair profile
 ![3 repair](https://github.com/lbhsgithub/shape_filter/blob/master/archived/images/3_repair.png)  
+
