@@ -1,6 +1,5 @@
 %% 形状函数在最后
 %% file open
-addpath('./other_file')
 [fname,path] = uigetfile({'*.jpg';'*.png'}); 
 p0 = imread([path,fname]);
 p0 = imcrop(p0);
