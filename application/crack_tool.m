@@ -3,6 +3,7 @@
 [address{2},address{1}] = uigetfile({'*.jpg';'*.png'}); 
 p = imread([address{1},address{2}]);
 p = imcrop(p);
+%p = imrotate(p,90);
 %% 
 if numel(size(p))==3
     p = rgb2gray(p);

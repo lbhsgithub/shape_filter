@@ -8,8 +8,8 @@ function markedCCs = markCCs(image,thresholds)
         markedCCs = markedCCs + shape_filter(every CC,thresholds)
     end
     function return = shape_filter(every CC,thresholds)
-        if shape/area... of CC satisfy thresholds(combination)
-            return =  every CC or []
+        if shape/area... of CC satisfy thresholds(with combination)
+            return =  every CC or [] % depend on if want to keep or eliminate
         end
     end
 end
