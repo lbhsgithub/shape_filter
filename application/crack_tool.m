@@ -68,7 +68,7 @@ function GUI(p,address)
         if k
             set(edit_binary,'string',num2str(k));
         else
-            get(hObject,'string');
+            k = get(hObject,'string');
             k = str2double(k);
             set(slider_binary,'value',k);
         end
